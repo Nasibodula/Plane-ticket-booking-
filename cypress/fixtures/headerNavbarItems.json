@@ -1,0 +1,37 @@
+[
+  {
+    "name": "Home",
+    "path": "/",
+    "icon": "material-symbols:home-pin-outline"
+  },
+  {
+    "name": "Ticket",
+    "path": "/ticket-management",
+    "icon": "material-symbols:airplane-ticket-outline-rounded"
+  },
+  {
+    "name": "Experience",
+    "path": "/experience",
+    "icon": "material-symbols:workspace-premium-rounded"
+  },
+  {
+    "name": "Campaign",
+    "path": "/campaign",
+    "icon": "material-symbols:campaign-rounded"
+  },
+  {
+    "name": "Destination",
+    "path": "/destination",
+    "icon": "material-symbols:flight-takeoff-rounded"
+  },
+  {
+    "name": "Help",
+    "path": "/help",
+    "icon": "material-symbols:help-outline-rounded"
+  },
+  {
+    "name": "Contact",
+    "path": "/contact",
+    "icon": "material-symbols:headphones-outline-rounded"
+  }
+]

@@ -1,0 +1,387 @@
+@import "../../../styles/variables.scss";
+
+.reservation {
+    .headline {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        padding-top: 30px;
+        padding-bottom: 20px;
+        .title {
+            color: $dark-gray;
+            text-align: center;
+            font-size: 2.5rem;
+            font-weight: 600;
+            @media (max-width: $sm-breakpoint) {
+                font-size: 1.5rem;
+            }
+        }
+        .description {
+            color: $dark-gray;
+            text-align: center;
+            font-size: 1rem;
+            font-weight: 500;
+        }
+        &::after {
+            content: "";
+            position: relative;
+            display: block;
+            background-color: $red;
+            width: 40px;
+            height: 2px;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+    }
+    .flights-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 30px;
+        margin-top: 30px;
+        @media (max-width: $md-breakpoint) {
+            flex-direction: column;
+        }
+        @media (max-width: $sm-breakpoint) {
+            flex-direction: column;
+            margin-top: 10px;
+        }
+        .reservation-card {
+            background-color: $white;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            border-radius: 8px;
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+            .reservation-header {
+                .reservation-title {
+                    background-color: $red;
+                    padding: 15px;
+                    border-radius: 8px 8px 0px 0px;
+                    h2 {
+                        font-size: 1rem;
+                        color: $white;
+                        text-align: center;
+                    }
+                }
+            }
+            .reservation-details {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                grid-template-rows: repeat(4, auto);
+                grid-gap: 10px;
+                padding: 15px;
+                @media (max-width: $xxl-breakpoint) {
+                    grid-template-columns: repeat(1, 1fr);
+                    grid-template-rows: repeat(8, auto);
+                }
+                @media (max-width: $xl-breakpoint) {
+                    grid-template-columns: repeat(1, 1fr);
+                    grid-template-rows: repeat(8, auto);
+                }
+                @media (max-width: $lg-breakpoint) {
+                    grid-template-columns: repeat(1, 1fr);
+                    grid-template-rows: repeat(8, auto);
+                }
+                @media (max-width: $md-breakpoint) {
+                    grid-template-columns: repeat(1, 1fr);
+                    grid-template-rows: repeat(8, auto);
+                }
+                @media (max-width: $sm-breakpoint) {
+                    grid-template-columns: repeat(1, 1fr);
+                    grid-template-rows: repeat(8, auto);
+                }
+                .reservation-row {
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+                    @media (max-width: $md-breakpoint) {
+                        font-size: 0.9rem;
+                    }
+                    @media (max-width: $sm-breakpoint) {
+                        font-size: 0.9rem;
+                    }
+                    .reservation-label {
+                        display: flex;
+                        align-items: center;
+                        color: $dark-gray;
+                        svg {
+                            color: $red;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .payment-wrapper {
+        margin-top: 30px;
+        margin-bottom: 30px;
+        background-color: $white;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        border-radius: 8px;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        .payment-header {
+            .payment-title {
+                background-color: $red;
+                padding: 15px;
+                border-radius: 8px 8px 0px 0px;
+                h2 {
+                    font-size: 1rem;
+                    color: $white;
+                    text-align: center;
+                }
+            }
+        }
+        .payment-details {
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            padding: 30px;
+            @media (max-width: $lg-breakpoint) {
+                gap: 30px;
+            }
+            @media (max-width: $md-breakpoint) {
+                flex-direction: column;
+                padding: 15px;
+                gap: 0px;
+            }
+            @media (max-width: $sm-breakpoint) {
+                flex-direction: column;
+                padding: 12px;
+                gap: 0px;
+            }
+            .credit-card {
+                display: flex;
+                justify-content: center;
+                margin-bottom: 20px;
+                .card-front {
+                    width: 320px;
+                    height: 200px;
+                    background: linear-gradient(135deg, $blue, $light-blue);
+                    border-radius: 12px;
+                    color: $white;
+                    padding: 15px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+                    @media (max-width: $sm-breakpoint) {
+                        width: 270px;
+                        height: 150px;
+                    }
+                    .chip {
+                        width: 40px;
+                        height: 30px;
+                        background: $gold;
+                        border-radius: 4px;
+                    }
+                    .card-number {
+                        font-size: 1.2rem;
+                        letter-spacing: 2px;
+                        @media (max-width: $sm-breakpoint) {
+                            font-size: 0.85rem;
+                        }
+                    }
+                    .cardholder-name {
+                        font-size: 1rem;
+                        text-transform: uppercase;
+                        @media (max-width: $sm-breakpoint) {
+                            font-size: 0.85rem;
+                        }
+                    }
+                    .expiry {
+                        font-size: 0.9rem;
+                        @media (max-width: $sm-breakpoint) {
+                            font-size: 0.8rem;
+                        }
+                    }
+                    .cvv {
+                        font-size: 0.9rem;
+                        @media (max-width: $sm-breakpoint) {
+                            font-size: 0.8rem;
+                        }
+                    }
+                }
+            }
+            .payment-form {
+                @media (max-width: $md-breakpoint) {
+                    width: 100%;
+                }
+                @media (max-width: $sm-breakpoint) {
+                    width: 100%;
+                }
+                .form-group {
+                    margin-bottom: 25px;
+                }
+                .form-row {
+                    display: flex;
+                    gap: 15px;
+                    @media (max-width: $sm-breakpoint) {
+                        flex-direction: column;
+                        gap: 0px;
+                    }
+                    .form-group {
+                        flex: 1;
+                    }
+                }
+                .input-container {
+                    position: relative;
+                    width: 100%;
+                    .floating-input {
+                        width: 100%;
+                        max-height: 60px;
+                        padding: 20px;
+                        font-size: 1rem;
+                        background-color: $white;
+                        border: 1px solid $light-gray;
+                        border-radius: 4px;
+                        outline: none;
+                        transition: border-color 0.3s ease;
+                        @media (max-width: $sm-breakpoint) {
+                            max-height: 50px;
+                            font-size: 0.85rem;
+                        }
+                        &:focus {
+                            border-color: $red;
+                            background-color: $white;
+                        }
+                    }
+                    .floating-label {
+                        position: absolute;
+                        top: 50%;
+                        left: 10px;
+                        font-size: 1rem;
+                        color: $dark-gray;
+                        pointer-events: none;
+                        background-color: transparent;
+                        padding: 0 4px;
+                        transition: all 0.3s ease;
+                        transform: translateY(-50%);
+                        @media (max-width: $sm-breakpoint) {
+                            font-size: 0.85rem;
+                        }
+                    }
+                    .floating-input:focus + .floating-label,
+                    .floating-input:not(:placeholder-shown) + .floating-label {
+                        top: 0px;
+                        left: 15px;
+                        font-size: 0.8rem;
+                        color: $red;
+                        background-color: $white;
+                    }
+                }
+                .pay-button {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 5px;
+                    font-size: 1.2rem;
+                    padding: 20px;
+                    width: 100%;
+                    max-height: 60px;
+                    background-color: $red;
+                    color:  $white;
+                    border-radius: 4px;
+                    text-decoration: none;
+                    transition: background-color 0.3s ease;
+                    border: solid 1px transparent;
+                    cursor: pointer;
+                    @media (max-width: $sm-breakpoint) {
+                        max-height: 50px;
+                        font-size: 1rem;
+                    }
+                    &:hover {
+                        background-color: $white;
+                        color: $red;
+                        border-color: $red;
+                    }
+                    svg {
+                        font-size: 1.5rem;
+                        @media (max-width: $sm-breakpoint) {
+                            font-size: 1rem;
+                        }
+                    }
+                }
+                .error-message {
+                    position: absolute;
+                    color: $red;
+                    font-size: 0.75rem;
+                    margin-top: 5px;
+                    @media (max-width: $sm-breakpoint) {
+                        font-size: 0.65rem;
+                    }
+                }
+            }
+        }
+    }
+    .reservation-popup {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 1000;
+        .reservation-popup-content {
+            background: $white;
+            padding: 20px 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            max-width: 400px;
+            width: 100%;
+            @media (max-width: $sm-breakpoint) {
+                max-width: 300px;
+            }
+            .reservation-popup-title {
+                font-size: 1.5rem;
+                color: $dark-gray;
+                margin-bottom: 10px;
+                font-weight: bold;
+                @media (max-width: $sm-breakpoint) {
+                    font-size: 1.1rem;
+                }
+            }
+            .reservation-popup-message {
+                font-size: $size;
+                color: $dark-gray;
+                margin-bottom: 20px;
+                @media (max-width: $sm-breakpoint) {
+                    font-size: 0.85rem;
+                }
+            }
+            .reservation-popup-close {
+                padding: 10px 20px;
+                background: $red;
+                color: $white;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+                font-size: $size;
+                &:hover {
+                    background: darken($red, 10%);
+                }
+                @media (max-width: $sm-breakpoint) {
+                    padding: 8px 15px;
+                    font-size: 0.85rem;
+                }
+            }
+        }
+    }
+    .reservation-no-data {
+        color: $dark-gray;
+        text-align: center;
+        padding: 20px;
+        background: $h-gray;
+        border-radius: 8px;
+        font-weight: 600;
+    }
+}

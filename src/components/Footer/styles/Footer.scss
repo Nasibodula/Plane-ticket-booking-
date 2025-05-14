@@ -1,0 +1,324 @@
+@import "../../../styles/variables.scss";
+
+.footer {
+    background-color: $dark-gray;
+    .content {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: column;
+        gap: 70px;
+        padding: 80px 15px;
+        @media (max-width: $xl-breakpoint) {
+            padding: 50px 15px;
+            gap: 50px;
+        }
+        @media (max-width: $lg-breakpoint) {
+            padding: 50px 15px;
+            gap: 50px;
+        }
+        @media (max-width: $md-breakpoint) {
+            padding: 50px 15px;
+            gap: 50px;
+        }
+        @media (max-width: $sm-breakpoint) {
+            padding: 30px 15px;
+            gap: 30px;
+        }
+        .footer-info {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+            @media (max-width: $xl-breakpoint) {
+                flex-direction: column;
+                gap: 45px;
+            }
+            @media (max-width: $lg-breakpoint) {
+                flex-direction: column;
+                gap: 45px;
+            }
+            @media (max-width: $md-breakpoint) {
+                flex-direction: column;
+                gap: 45px;
+            }
+            @media (max-width: $sm-breakpoint) {
+                gap: 30px;
+            }
+            .footer-logo {
+                display: flex;
+                align-items: center;
+                justify-content: flex-start;
+                flex: 1;
+                @media (max-width: $sm-breakpoint) {
+                    img {
+                        width: 100%;
+                        height: 40px;
+                        object-fit: cover;
+                    }
+                }
+            }
+            .footer-newsletter {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                flex: 1;
+                @media (max-width: $xl-breakpoint) {
+                    align-items: center;
+                }
+                @media (max-width: $lg-breakpoint) {
+                    align-items: center;
+                }
+                @media (max-width: $md-breakpoint) {
+                    align-items: center;
+                }
+                @media (max-width: $sm-breakpoint) {
+                    align-items: center;
+                }
+                .title {
+                    font-size: 1.5rem;
+                    @media (max-width: $sm-breakpoint) {
+                        font-size: 1.2rem;
+                    }
+                    margin-bottom: 10px;
+                    color: $white;
+                    text-align: center;
+                }
+                .description {
+                    font-size: 1rem;
+                    @media (max-width: $sm-breakpoint) {
+                        font-size: 0.9rem;
+                    }
+                    margin-bottom: 20px;
+                    color: $white;
+                    line-height: 1.5;
+                    @media (max-width: $md-breakpoint) {
+                        text-align: center;
+                    }
+                }
+                .form {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    @media (max-width: $sm-breakpoint) {
+                        flex-direction: column;
+                    }
+                    gap: 10px;
+                    width: 100%;
+                    .input {
+                        font-size: 1rem;
+                        @media (max-width: $sm-breakpoint) {
+                            font-size: 0.85rem;
+                        }
+                        padding: 15px;
+                        border-radius: 8px;
+                        border: none;
+                        width: 100%;
+                    }
+                    .submitButton {
+                        padding: 15px;
+                        background-color: $red;
+                        color: $white;
+                        border: none;
+                        border-radius: 8px;
+                        font-size: 1rem;
+                        font-weight: bold;
+                        cursor: pointer;
+                        @media (max-width: $sm-breakpoint) {
+                            width: 100%;
+                            font-size: 0.85rem;
+                        }
+                    }
+                }
+                .popUpMessage {
+                    position: fixed;
+                    bottom: 20px;
+                    right: 20px;
+                    padding: 15px;
+                    border-radius: 8px;
+                    color: $white;
+                    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                    z-index: 1000;
+                    animation: fadeInOut 3s ease-in-out;
+                    p {
+                        margin: 0;
+                        font-size: 1rem;
+                    }
+                    @keyframes fadeInOut {
+                        0% {
+                            opacity: 0;
+                            transform: translateY(20px);
+                        }
+                        10% {
+                            opacity: 1;
+                            transform: translateY(0);
+                        }
+                        90% {
+                            opacity: 1;
+                            transform: translateY(0);
+                        }
+                        100% {
+                            opacity: 0;
+                            transform: translateY(20px);
+                        }
+                    }
+                }
+            }
+            .footer-socialmedia {
+                display: flex;
+                align-items: center;
+                justify-content: flex-end;
+                flex: 1;
+                gap: 8px;
+                @media (max-width: $sm-breakpoint) {
+                    img {
+                        width: 30px;
+                        height: 30px;
+                    }
+                }
+            }
+        }
+        .footer-navbar {
+            width: 100%;
+            .navbar {
+                display: grid;
+                grid-template-columns: repeat(5, 1fr);
+                grid-template-rows: repeat(2, 1fr);
+                gap: 20px; 
+                @media (max-width: $lg-breakpoint) {
+                    grid-template-columns: repeat(4, 1fr);
+                    grid-template-rows: repeat(3, 1fr);
+                }
+                @media (max-width: $md-breakpoint) {
+                    grid-template-columns: repeat(1, 1fr);
+                    grid-template-rows: repeat(1, 1fr);
+                }
+                @media (max-width: $sm-breakpoint) {
+                    gap: 12px;
+                }
+                .navbar-content {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 20px;
+                    @media (max-width: $md-breakpoint) {
+                        gap: 0;
+                        background-color: $white;
+                        padding: 12px;
+                        border-radius: 8px;
+                    }
+                    @media (max-width: $sm-breakpoint) {
+                        padding: 8px;
+                    }
+                    .navbar-title {
+                        font-size: 1.2rem;
+                        @media (max-width: $xl-breakpoint) {
+                            font-size: 1rem;
+                        }
+                        @media (max-width: $lg-breakpoint) {
+                            font-size: 1rem;
+                        }
+                        @media (max-width: $md-breakpoint) {
+                            font-size: 1.2rem;
+                        }
+                        @media (max-width: $sm-breakpoint) {
+                            font-size: 0.9rem;
+                        }
+                        color: $white;
+                        .navbar-icon {
+                            display: none;
+                        }
+                        @media (max-width: $md-breakpoint) {
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: center;
+                            color: $red;
+                            .navbar-icon {
+                                display: block;
+                                transition: transform 0.3s ease;
+                                line-height: 0;
+                                &.open {
+                                    transform: rotate(180deg);
+                                }
+                            }
+                        }
+                    }
+                    .navbar-list {
+                        @media (max-width: $md-breakpoint) {
+                            max-height: 0;
+                            overflow: hidden;
+                            transition: max-height 0.3s ease;
+                            &.open {
+                                max-height: 200px;
+                            }
+                        }
+                        .navbar-item {
+                            margin-bottom: 15px;
+                            @media (max-width: $md-breakpoint) {
+                                margin-top: 15px;
+                                margin-bottom: 20px;
+                                &:last-child {
+                                    margin-bottom: 5px;
+                                }
+                            }
+                            .navbar-link {
+                                font-size: 1rem;
+                                color: $light-gray;
+                                @media (max-width: $xl-breakpoint) {
+                                    font-size: 0.9rem;
+                                }
+                                @media (max-width: $lg-breakpoint) {
+                                    font-size: 0.85rem;
+                                }
+                                @media (max-width: $md-breakpoint) {
+                                    color: $red;
+                                    font-size: 1.1rem;
+                                }
+                                @media (max-width: $sm-breakpoint) {
+                                    font-size: 0.85rem;
+                                }
+                                transition-duration: 300ms;
+                                &:hover {
+                                    color: $red;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .footer-brand-actions {
+            width: 100%;
+            .brand-actions-content {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                @media (max-width: $md-breakpoint) {
+                    flex-direction: column-reverse;
+                    gap: 30px;
+                }
+                .copyright {
+                    font-size: 1rem;
+                    text-align: center;
+                    @media (max-width: $xl-breakpoint) {
+                        font-size: 0.85rem;
+                    }
+                    @media (max-width: $lg-breakpoint) {
+                        font-size: 0.85rem;
+                    }
+                    @media (max-width: $md-breakpoint) {
+                        font-size: 0.85rem;
+                    }
+                    @media (max-width: $sm-breakpoint) {
+                        font-size: 0.85rem;
+                    }
+                    color: $white;
+                }
+                .markets {
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+                }
+            }
+        }
+    }
+}
